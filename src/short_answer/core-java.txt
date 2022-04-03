@@ -1,9 +1,9 @@
-***ANSWER ALL OF THE QUESTIONS BELOW***
+***ANSWER ALL THE QUESTIONS BELOW***
 
 What is a programming language?
 Answer:
 
-What is a JDK composed of? Define each components?
+What is a JDK composed of? Define each component?
 Answer:
 
 What is an IDE?
@@ -48,13 +48,13 @@ Answer:
 What is Java Package and which package is imported by default?
 Answer:
 
-What is an API? List some API's that you have used so far.
+What is an API? List some APIs that you have used so far.
 Answer:
 
 Does java support multiple inheritance? Why or why not?
 Answer:
 
-What is method overloading? List all of the different ways to overload.
+What is method overloading? List all the different ways to overload.
 Answer:
 
 Explain exceptions in java and how to handle them.
@@ -120,7 +120,7 @@ Answer:
 What is Serialization and Deserialization?
 Answer:
 
-Explain the difference between While and Do..While loops?
+Explain the difference between While and Do-While loops?
 Answer:
 
 What is Enum?
@@ -141,7 +141,7 @@ Answer:
 The difference between Serial and Parallel Garbage Collector?
 Answer:
 
-What does JIT stands for?
+What does JIT stand for?
 Answer:
 
 Explain the process of Java garbage collection?
