@@ -1,71 +1,101 @@
-***ANSWER ALL OF THE QUESTIONS BELOW***
+***ANSWER ALL THE QUESTIONS BELOW***
 
-Why do we need data structure?
+1. Why do we need data structure?
+Answer: We need data structures in Java to store and organize data. Data structure allow us to manage large amounts
+        of data efficiently.
+
+2. What are the various operations that can be performed on different data structures?
+Answer: The various operations that can be performed on different data structures include:
+
+            Insertion - add new data item
+
+            Deletion - delete an existing data item
+
+            Traversal - access each data item exactly once
+
+            Searching - find location of data item
+
+            Sorting - arrange data items in some order (ex. ascending/descending order with numerical data)
+
+3. When would we use data structures in the real world?
+Answer: In the real world we use graphs all the time. Graphs are a non-linear data structure with nodes and
+        connections. An example of something that uses a graph is Google Maps. Graphs in this example would help
+        you find the shortest path using an algorithm.
+
+4. What is an Array?
+Answer: Arrays are objects which store multiple items of the same type. Every item in an array has an index number
+        that a programmer can use to get that item.
+
+5. What is the difference between Array and ArrayList?
+Answer: The main difference is that Array is a fixed length data structure whereas ArrayList is a variable length
+        Collection class. Also, the length of an array cannot be changed once created, however, an ArrayList can.
+
+6. What is a LinkedList?
+Answer: A LinkedList is an ordered collection that contains many objects of the same type. Data in a LinkedList
+        is stored in a sequence of containers. The list holds a reference to the first container and each container
+        has a link to the next one in the sequence.
+
+7. How is an Array different from LinkedList?
+Answer: Main difference is that array elements are stored in a contiguous (together in sequence) memory location
+        whereas LinkedList elements can be stored anywhere in the memory or randomly stored.
+
+8. What is a Queue?
+Answer: A Queue in Java provides additional insertion, extraction and inspection operations.
+
+9. What is a Stack (referring to data structures)?
+Answer: A Stack is a linear data structure that follows the principle of Last In First Out (LIFO)
+
+10. What are FIFO and LIFO?
+Answer: FILO stands for "First In, Last Out" and LIFO stands for "Last In, First Out" and they are acronyms commonly
+        used to describe the order in which objects are accessed.
+
+11. Explain Big O Notation? (do later)
 Answer:
 
-What are the various operations that can be performed on different data structures?
-Answer:
+12. What is the best case to search an element from an array?
+Answer: O(n)
 
-When would we use data structures in the real world?
-Answer:
+13. What is the worst case to search an element from an array?
+Answer: O(n)
 
-What is an Array?
-Answer:
+14. Describe what a tree data structure is?
+Answer: A tree is a hierarchical data structure with different types of nodes such as root, parent, leaf etc.
 
-What is the difference between Array and ArrayList?
-Answer:
+15. Describe what a graph data structure is?
+Answer: A graph is a non-linear data structure with nodes and connections.
 
-What is a LinkedList?
-Answer:
+16. What is the difference between the HashTable and HashMap?
+Answer: HashMap is non-synchronized whereas HashTable is synchronized, which means HashTable is thread-safe and can
+        be shared between multiple threads but HashMap cannot be shared between multiple threads without proper
+        synchronization.
 
-How is an Array different from LinkedList?
-Answer:
+17. How do HashMaps work in Java? How do they store values, and when are they useful?
+Answer: HashMaps in Java work on hashing principles. Objects are stored by calling put(key, value) method of
+        HashMap and retrieved calling the get(key) method. Hashmaps are useful when unique keys are available
+        for the data we want to store.
 
-What is a Queue?
-Answer:
+18. What is ArrayIndexOutOfBoundsException in java? When does it occur?
+Answer: ArrayIndexOutOfBoundsException is one of the most common errors in Java programs. It occurs whenever we
+        are trying to access an invalid index (an index that is not positive or greater than the length of an array).
 
-What is a Stack (referring to data structures)?
-Answer:
+19. What are the different ways of copying an array into another array?
+Answer: There are 4 main ways of copying an array into another array:
 
-What is FIFO and LIFO?
-Answer:
+            1. Manually
+            2. Arrays.copyOf()
+            3. System.arraycopy()
+            4. Object.clone()
 
-Explain Big O Notation?
-Answer:
+20. What is DFS and BFS?
+Answer: DFS stands for Depth First Search, and it uses Stack data structure. BFS stands for Breadth First Search,
+        and it uses Queue data structure for finding the shortest path.
 
-What is the best case to search an element from an array?
-Answer:
+21. What is Recursion?
+Answer: Recursion is the technique of making a function call itself.
 
-What is the worst case to search an element from an array?
-Answer:
-
-Describe what a tree data structure is?
-Answer:
-
-Describe what a graph data structure is?
-Answer:
-
-What is the difference between the HashTable and HashMap?
-Answer:
-
-How do HashMaps work in Java? How do they store values, and when are they useful?
-Answer:
-
-What is ArrayIndexOutOfBoundsException in java? When does it occur?
-Answer:
-
-What are the different ways of copying an array into another array?
-Answer:
-
-What is DFS and BFS?
-Answer:
-
-What is Recursion?
-Answer:
-
-What are linear and non-linear data Structures?
+22. What are linear and non-linear data Structures?
 Answer:
 
 
-Outline different sorting algorithms and their time complexities:
+23. Outline different sorting algorithms and their time complexities:
 

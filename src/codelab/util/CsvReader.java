@@ -12,8 +12,9 @@ import java.util.List;
 public class CsvReader {
 
     /**
-     You will find a Comma-Separated Value (CSV) file within this package of CodeLab status is downloaded and it parsed.
-     Based on number of solution you solved, message is generated for you.
+     You will find a Comma-Separated Value (CSV) file within this package. It contains CodeLab status' for each student
+     who registered for the CodeLab course.
+     Based on the number of solutions you solved in CodeLab, a message will be generated for you.
      You need to find the average score of the class.
      **/
 
