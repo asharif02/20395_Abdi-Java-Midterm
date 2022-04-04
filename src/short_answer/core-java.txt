@@ -62,20 +62,38 @@ Answer: The main() method is static, so you can call on the method WITHOUT havin
 10. Which class is the superclass of all classes?
 Answer: The Object class because all classes in Java "extend" from the Object class by default.
 
-What is difference between path and classpath variables?
-Answer:
+11. What is difference between path and classpath variables?
+Answer: path variable is used to set the path for all Java software tools while classpath is used to set
+        the path for java classes
 
-What is the difference between an Interface and Abstract class?
-Answer:
+12. What is the difference between an Interface and Abstract class?
+Answer: There are MANY differences between an Interface and Abstract class, but here are a few:
+            - Abstract class declared using "abstract" keyword while Interface is declared using "interface" keyword
+            - Abstract class can be inherited using "extends" keyword while Interface can only be implemented using
+              "implements" keyword
+            - A class can extend only one abstract class while a class can implement multiple interfaces
+            - An Abstract class provides default code that must be overridden while an Interface is abstract, so it
+              can't provide any code
 
-Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
-Answer:
+13. Can you make an Object from an Interface and Abstract class? If yes or no, how would you do it?
+Answer: No, we cannot create objects from an Interface and Abstract class.
 
-What is Access Modifier?
-Answer:
+14. What is Access Modifier?
+Answer: Access Modifiers are used to define the accessibility and scope of a class or data variable. In Java, an
+        access modifier MUST be specified whenever a variable or method is being defined.
 
-What is OOP? Define each OOP concept.
-Answer:
+15. What is OOP? Define each OOP concept.
+Answer: For starters, OOP stands for Object-Oriented Programming. OOP is all about creating objects that contain
+        both data and methods. The main OOP concepts include Abstraction, Encapsulation, Inheritance and
+        Polymorphism.
+
+            Abstraction -
+
+            Encapsulation -
+
+            Inheritance -
+
+            Polymorphism -
 
 What is Java Package and which package is imported by default?
 Answer:
