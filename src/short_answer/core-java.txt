@@ -87,96 +87,149 @@ Answer: For starters, OOP stands for Object-Oriented Programming. OOP is all abo
         both data and methods. The main OOP concepts include Abstraction, Encapsulation, Inheritance and
         Polymorphism.
 
-            Abstraction -
+            Abstraction - using simple things (objects, classes and variables) to represent complexity
 
-            Encapsulation -
+            Encapsulation - data hiding by making fields in a class private. You can access those private fields
+                            later via public methods.
 
-            Inheritance -
+            Inheritance - allows you to create new classes that share some attributes of existing classes
 
-            Polymorphism -
+            Polymorphism - same name but different forms. Two common forms are Method Overloading and Method
+                           Overriding. Method overloading is when methods in the same class have the exact same name
+                           but take different parameters. Method overriding is replacing a method that previously
+                           existed in the parents class.
 
-What is Java Package and which package is imported by default?
-Answer:
+16. What is Java Package and which package is imported by default?
+Answer: A Java Package is like a folder in a file directory. It's used to group related classes.
 
-What is an API? List some APIs that you have used so far.
-Answer:
+17. What is an API? List some APIs that you have used so far.
+Answer: API stands for Application Programming Interface, and it allows applications to talk to each other. Amazon,
+        the Weather App and Google Maps are some APIs I have used.
 
-Does java support multiple inheritance? Why or why not?
-Answer:
+18. Does java support multiple inheritance? Why or why not?
+Answer: No, Java does not support multiple inheritance. Reason is to prevent ambiguity (uncertainty/vagueness in
+        meaning).
 
-What is method overloading? List all the different ways to overload.
-Answer:
+19. What is method overloading? List all the different ways to overload.
+Answer: Method overloading is when methods in the same class have the exact same name but take different parameters.
+        This can be done by changing:
+            - the number of parameters
+            - the data types of the parameters
+            - the order of parameters
 
-Explain exceptions in java and how to handle them.
-Answer:
+20. Explain exceptions in java and how to handle them.
+Answer: Exceptions are events that occur during the execution process that disrupts the normal flow of the program.
+        Try-Catch is the simplest way to handle exceptions; you put the code you want to run in the try block, and
+        any exceptions that are thrown by Java are caught by one or more catch blocks.
 
-What is static keyword? When and how do we use it?
-Answer:
+21. What is static keyword? When and how do we use it?
+Answer: Static keyword means that the particular member belongs to a type itself, rather than to an instance of that
+        type. Static is used to share the same variable or method of a given class. You can think of static like a
+        joint bank account.
 
-What is final keyword? When and how do we use it?
-Answer:
+22. What is final keyword? When and how do we use it?
+Answer: Final keyword is a non-access modifier used for classes, attributes and methods. Final is used when you want
+        to define an entity that can only be assigned ONCE.
 
-Explain the difference between final, finally and finalize?
-Answer:
+23. Explain the difference between final, finally and finalize?
+Answer: Differences between final, finally and finalize:
 
-What is a constructor?
-Answer:
+            final - keyword and access modifier used to apply restrictions on a class, method or variable
 
-Can we have multiple constructors in a class?
-Answer:
+            finally - block in Java Exception Handling to execute the important code regardless of whether the
+                      exception occurs or not
 
-If we don't have a constructor declared, what is called during the object creation?
-Answer:
+            finalize - method of Object class. It performs cleanup operations on unmanaged resources held by the
+                       current object before the object is destroyed
 
-What is "this" keyword in Java? When would we use it?
-Answer:
+24. What is a constructor?
+Answer: A constructor is a special method that is used to initialize objects.
 
-What is "super" keyword in Java? What are some scenarios we would use it?
-Answer:
+25. Can we have multiple constructors in a class?
+Answer: Yes you can. They can also have the same exact name (method overloading), you just need to make sure the
+        parameters are different.
 
-What does JVM stand for?
-Answer:
+26. If we don't have a constructor declared, what is called during the object creation?
+Answer: If we don't declare any constructors, Java will automatically create a default constructor for us during
+        object creation.
 
-Is JVM platform independent?
-Answer:
+27. What is "this" keyword in Java? When would we use it?
+Answer: The "this" keyword in Java refers to the current object in a method or constructor. We would use it when
+        objects in the method/constructor have the same name as the class attributes and parameters. Ultimately, we
+        want to eliminate any confusion whatsoever, that's why we use the "this" keyword.
 
-What version of Java are you using?
-Answer:
+28. What is "super" keyword in Java? What are some scenarios we would use it?
+Answer: The "super" keyword is used to access methods of the parent class. If a subclass had the same method name
+        as a method in the superclass, we would use the "super" keyword to avoid any confusion and differentiate the
+        methods.
 
-What does JAR stand for?
-Answer:
+29. What does JVM stand for?
+Answer: JVM stands for Java Virtual Machine
 
-What is the difference between JDK and JVM?
-Answer:
+30. Is JVM platform independent?
+Answer: No, it is platform DEPENDENT. Every JVM is designed for a different OS (operating system).
 
-What is the difference between JVM and JRE?
-Answer:
+31. What version of Java are you using?
+Answer: I'm using Java version 11
 
-Explain the difference between compile-time and run-time?
-Answer:
+32. What does JAR stand for?
+Answer: JAR stands for Java ARchive
 
-What is heap?
-Answer:
+33. What is the difference between JDK and JVM?
+Answer: JDK (Java Development Kit) is a software development kit needed to create Java programs while the JVM (Java
+        Virtual Machine) converts the bytecode to machine instructions.
 
-How does Java manage its memory?
-Answer:
+34. What is the difference between JVM and JRE?
+Answer: JVM (Java Virtual Machine) is responsible for converting bytecode to machine instructions while JRE (Java
+        Runtime Environment) are libraries needed to run Java programs.
 
-What is the difference between String, StringBuffer and StringBuilder?
-Answer:
+35. Explain the difference between compile-time and run-time?
+Answer: Compile-time is the period when the programming code (ex. Java) is converted to machine code (1's and 0's) while
+        Run-time is when the program is actually running and usually occurs after compile-time.
 
-What is Singleton class?
-Answer:
+36. What is heap?
+Answer: Basically, heap is a place in memory that is used to store objects. It doesn't matter where the object
+        is created in code, it is ALWAYS stored in the heap.
 
-What is Serialization and Deserialization?
-Answer:
+37. How does Java manage its memory?
+Answer: Java manages its memory through a process of allocating and de-allocating objects. Java uses an automatic
+        memory management system called the garbage collector.
 
-Explain the difference between While and Do-While loops?
-Answer:
+38. What is the difference between String, StringBuffer and StringBuilder?
+Answer: Difference between String, StringBuffer and StringBuilder:
 
-What is Enum?
-Answer:
+            String - object that contain a sequence of characters. Strings are immutable (cannot be changed).
 
-What is Iterator?
+            StringBuffer - mutable. Used in a multithreaded environment. Slower than StringBuilder but faster than
+                           String.
+
+            StringBuilder - mutable as well. Used in a single-threaded environment. Faster than StringBuffer
+
+39. What is Singleton class?
+Answer: A singleton class is a class that can only have one object at a time.
+
+40. What is Serialization and Deserialization?
+Answer: Serialization converts the state of an object into a byte stream while Deserialization does the opposite
+        where the byte stream is used to recreate the actual Java object in memory.
+
+41. Explain the difference between While and Do-While loops?
+Answer: The difference between While and Do-While loops are:
+
+            While Loops
+                - used when we need to repeatedly execute a block of statements
+                - considered a "repeating if statement"
+                - used when the number of iterations if not fixed
+                - condition-based
+
+            Do-While Loops
+                - always runs at least once REGARDLESS of the condition
+                - "DO this first and WHILE this is true, keep looping"
+
+42. What is Enum?
+Answer: Enum stands for enumeration and is a special "class" that represents a group of constants. Use enum keyword
+        to create an enum, amd separate the constants with a comma (constants should also be in UPPERCASE).
+
+43. What is Iterator?
 Answer:
 
 Which one will take more memory: an int or Integer? Why?
@@ -227,5 +280,5 @@ Answer:
 What is dependency injection in Java?
 Answer:
 
-Explain what static binding and dynamic binding is?
+60. Explain what static binding and dynamic binding is?
 Answer:
