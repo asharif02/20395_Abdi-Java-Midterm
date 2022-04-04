@@ -104,7 +104,7 @@ Answer: A Java Package is like a folder in a file directory. It's used to group 
 
 17. What is an API? List some APIs that you have used so far.
 Answer: API stands for Application Programming Interface, and it allows applications to talk to each other. Amazon,
-        the Weather App and Google Maps are some APIs I have used.
+        the Weather App and Google Maps are some APIs I have used (not sure if this is what you meant or not).
 
 18. Does java support multiple inheritance? Why or why not?
 Answer: No, Java does not support multiple inheritance. Reason is to prevent ambiguity (uncertainty/vagueness in
@@ -218,7 +218,7 @@ Answer: The difference between While and Do-While loops are:
             While Loops
                 - used when we need to repeatedly execute a block of statements
                 - considered a "repeating if statement"
-                - used when the number of iterations if not fixed
+                - used when the number of iterations is not fixed
                 - condition-based
 
             Do-While Loops
@@ -230,55 +230,88 @@ Answer: Enum stands for enumeration and is a special "class" that represents a g
         to create an enum, amd separate the constants with a comma (constants should also be in UPPERCASE).
 
 43. What is Iterator?
+Answer: Iterators are used to traverse each and every element in a collection.
+
+44. Which one will take more memory: an int or Integer? Why?
+Answer: Integer will take more memory because it's an object (128 bits / 16 bytes) while int is a primitive data
+        type (32 bits / 4 bytes).
+
+45. Why are Strings considered to be immutable in Java?
+Answer: In the String constant pool, a String object is likely to have one or many references. If several references
+        point to the same String without even knowing it, it would be bad if one of the references modified that String
+        value. That's why String objects are immutable.
+
+46. What is constructor chaining in Java?
+Answer: Constructor chaining in Java is basically the process of calling a sequence of constructors. We can do this
+        in two ways:
+            - using this() keyword for chaining constructors in the same class
+            - using super() keyword for chaining constructors from the parent class
+
+47. The difference between Serial and Parallel Garbage Collector?
+Answer: The main difference between Serial and Parallel Garbage Collector is that Serial Garbage Collector uses a
+        SINGLE thread for the garbage collection process while the Parallel Garbage Collector uses MULTIPLE threads
+        for the garbage collection.
+
+48. What does JIT stand for?
+Answer: JIT stands for Just-In-Time
+
+49. Explain the process of Java garbage collection?
+Answer: Java garbage collection is the process by which Java programs perform automatic memory management. Java
+        programs compile to bytecode that can be run on a Java Virtual Machine (JVM). When Java programs run on the
+        JVM, objects are created on the heap, which is a portion of memory dedicated to the program. Eventually,
+        some objects will no longer be needed. The garbage collector finds these unused objects and deletes them to
+        free up memory.
+
+50. Can you guarantee the garbage collection process?
+Answer: No, garbage collection cannot guarantee that your application will not run out of memory.
+
+51. What is the difference between stack and heap in Java?
+Answer: Difference between stack and heap:
+
+            Stack - is used to store local variables and function call
+
+            Heap - is a place in memory that is used to store objects. It doesn't matter where the object
+                   is created in code, it is ALWAYS stored in the heap.
+
+52. What is reflection in Java and why is it useful?
 Answer:
 
-Which one will take more memory: an int or Integer? Why?
-Answer:
+53. What is multithreading in Java?
+Answer: Multithreading allows the execution of multiple parts of a program at the same time. This ultimately leads to
+        maximum utilization of the CPU by multitasking.
 
-Why are Strings considered to be immutable in Java?
-Answer:
+54. What is synchronization in Java?
+Answer: Synchronization is the capability to control the access of multiple threads to any shared resource.
 
-What is constructor chaining in Java?
-Answer:
+55. What is a Framework?
+Answer: In terms of programming, a framework is a tool that provides ready-made components or solutions that are
+        customized in order to speed up development. Some popular test automation frameworks include Selenium, Cypress,
+        Cucumber and more.
 
-The difference between Serial and Parallel Garbage Collector?
-Answer:
+56. What are the testing Frameworks available in Java?
+Answer: The testing frameworks available in Java are Selenium, TestNG, JUnit, and more.
 
-What does JIT stand for?
-Answer:
+57. What are jUnit and testNG?
+Answer: JUnit is an open-source regression testing framework that is mainly used to execute unit testing, speed up
+        programming and improve the quality of code in Java. TestNG is a popular and powerful Java testing framework
+        used for integration, functional and unit testing.
 
-Explain the process of Java garbage collection?
-Answer:
+58. What are the dependencies for this project?
+Answer: The dependencies for this Java Midterm project are:
+            - gson
+            - jackson-annotations
+            - jackson-core
+            - jackson-databind
+            - java-json
+            - javax.json
+            - mongo-java-driver
+            - mysql-connector-java
+            - protobuf-java
+            - testng
 
-Can you guarantee the garbage collection process?
-Answer:
-
-What is the difference between stack and heap in Java?
-Answer:
-
-What is reflection in Java and why is it useful?
-Answer:
-
-What is multithreading in Java?
-Answer:
-
-What is synchronization in Java?
-Answer:
-
-What is a Framework?
-Answer:
-
-What are the testing Frameworks available in Java?
-Answer:
-
-What are jUnit and testNG?
-Answer:
-
-What are the dependencies for this project?
-Answer:
-
-What is dependency injection in Java?
-Answer:
+59. What is dependency injection in Java?
+Answer: Dependency injection is the concept in which objects get other required objects from outside.
 
 60. Explain what static binding and dynamic binding is?
-Answer:
+Answer: Static binding happens at compile-time while dynamic binding happens at runtime. The binding of overloaded
+        methods is static and the binding of overridden methods are dynamic.
