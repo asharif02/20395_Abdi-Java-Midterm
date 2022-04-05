@@ -17,7 +17,7 @@ public class CsvReader {
      * who registered for the CodeLab course.
      * <p>
      * Based on the number of solutions you solved in CodeLab, a message will be generated for you.
-     * You need to find the average score of the class.
+     * You need to find the average score of the class. [13]
      **/
 
     public static void main(String[] args) {
@@ -27,41 +27,92 @@ public class CsvReader {
         String csvSplitBy = ",";
         BufferedReader br;
         List<Student> roster = new ArrayList<>();
-        String line = "";
+        ArrayList<Integer> arrayList = new ArrayList<>();
+
+        /** SOLUTION
+        try {
+            //parsing a CSV file into BufferedReader class constructor
+            br = new BufferedReader(new FileReader(csvFilePath));
+
+            int lineNumber = 0;
+
+            while ((row = br.readLine()) != null) {
+            //returns a Boolean value
+                if(lineNumber == 0) {
+                    lineNumber++;
+                    continue;
+                }
+
+                String[] rowArray = row.split(csvSplitBy);
+                //use comma as separator
+//                System.out.println(rowArray[5].replace("\"", ""));
+//                System.out.println(rowArray[13]);
+                arrayList.add(Integer.parseInt(rowArray[13]));
+
+            }
+        } catch(IOException e) {
+            e.printStackTrace();
+        }
+
+        int sum = 0;
+
+        for(Integer i : arrayList) {
+            sum += i;
+        }
+
+        System.out.println("The average score of the class is: " + (sum / arrayList.size()));
+        */
 
 
+
+
+        /** TESTING
         try {
             br = new BufferedReader(new FileReader(csvFilePath));
-            while((line = br.readLine()) != null) {
+            int lineNumber = 0;
+            ArrayList<String> total = new ArrayList<>();
+            int avg = 0;
+            while((line =br.readLine()) != null) {
+                if(lineNumber == 0) {
+                    lineNumber++;
+                    continue;
+                }
                 String[] values = line.split(csvSplitBy);
-                System.out.println(values[13].replace("\"", "")); // gets all the scores
+                total.add(values[13]);
+                System.out.println(total);
+//                System.out.println(values[13]); // gets all the scores
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+         */
+
+
+        /** SAMI's CODE
+        try {
+            br = new BufferedReader(new FileReader(csvFilePath));
+            int lineNumber = 0;
+            while ((row = br.readLine()) != null) {
+                if (lineNumber == 0) {
+                    lineNumber++;
+                    continue;
+                }
+                String[] rowArray = row.split(csvSplitBy);
+                roster.add(new Student(rowArray[5].replace("\"", ""), rowArray[4].replace("\"",
+                        ""), Integer.parseInt(rowArray[10])));
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+        Collections.sort(roster);
 
-//        try {
-//            br = new BufferedReader(new FileReader(csvFilePath));
-//            int lineNumber = 0;
-//            while ((row = br.readLine()) != null) {
-//                if (lineNumber == 0) {
-//                    lineNumber++;
-//                    continue;
-//                }
-//                String[] rowArray = row.split(csvSplitBy);
-//                roster.add(new Student(rowArray[5].replace("\"", ""), rowArray[4].replace("\"",
-//                        ""), Integer.parseInt(rowArray[10])));
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//
-//        Collections.sort(roster);
-//
-//        for (Student student : roster) {
-//            System.out.println(convertNumberOfProblemsSolved(student));
-//        }
+        for (Student student : roster) {
+            System.out.println(convertNumberOfProblemsSolved(student));
+        }
+         */
+
+
     }
 
     private static String convertNumberOfProblemsSolved(Student student) {
