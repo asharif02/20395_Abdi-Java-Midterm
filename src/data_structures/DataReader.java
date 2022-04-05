@@ -23,17 +23,13 @@ public class DataReader {
      **/
 
     public static void main(String[] args) {
-        // use double backslashes '\\' with file paths
-        // self-driving-car is not a .txt
-        String textFilePath = System.getProperty("user.dir") + "\\src\\data_structures\\data\\self-driving-car";
-        // testing if the correct path gets printed
-//        System.out.println(textFilePath);
+        String textFilePath = System.getProperty("user.dir") + "/src/data_structures/data/self-driving-car";
+//        System.out.println(textFilePath); // testing if the correct path gets printed
 
         // try/catch block used for exception handling
         try {
             // reader object
             BufferedReader reader = new BufferedReader(new FileReader(textFilePath));
-            // empty variable
             String line;
             // for each iteration through the loop, read each line of text and put it in 'line' variable
             // once 'line' is null/empty, we've reached the end of the file, and it'll exit the while loop

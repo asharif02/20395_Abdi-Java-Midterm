@@ -12,7 +12,7 @@ import java.util.List;
 
 public class CsvReader {
 
-    /**
+    /** INSTRUCTIONS
      * You will find a Comma-Separated Value (CSV) file within this package. It contains CodeLab status' for each student
      * who registered for the CodeLab course.
      *
