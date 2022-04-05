@@ -1,5 +1,10 @@
 package data_structures;
 
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+
 public class DataReader {
 
     /**
@@ -18,7 +23,28 @@ public class DataReader {
      **/
 
     public static void main(String[] args) {
-        String textFilePath = System.getProperty("user.dir") + "/src/data_structures/data/self-driving-car.txt";
+        // use double backslashes '\\' with file paths
+        // self-driving-car is not a .txt
+        String textFilePath = System.getProperty("user.dir") + "\\src\\data_structures\\data\\self-driving-car";
+        // testing if the correct path gets printed
+//        System.out.println(textFilePath);
+
+        // try/catch block used for exception handling
+        try {
+            // reader object
+            BufferedReader reader = new BufferedReader(new FileReader(textFilePath));
+            // empty variable
+            String line;
+            // for each iteration through the loop, read each line of text and put it in 'line' variable
+            // once 'line' is null/empty, we've reached the end of the file, and it'll exit the while loop
+            while((line = reader.readLine()) != null)
+                System.out.println(line);
+//                System.out.println(reader.readLine()); // .readLine() only reads a single line
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
 
     }
 
