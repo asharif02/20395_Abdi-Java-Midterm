@@ -9,7 +9,7 @@ public class CollectionView {
     /** INSTRUCTIONS
      * A map is given to you below, with some data inserted into it.
      *
-     * Retrieve the Collection view of the values present in map
+     * Retrieve the Collection view of the values present in map.
      */
 
     public static void main(String[] args) {
@@ -22,14 +22,17 @@ public class CollectionView {
         map.put(5, "San Jose");
         map.put(6, "Seattle");
 
-        // print every key-value pair
-        System.out.println(map);
+        /** TESTING
+        System.out.println(map); // print every key-value pair
 
-        // get specific value from the map
-        System.out.println(map.get(4)); // go celtics!
+        System.out.println(map.get(4)); // get specific value from the map // go celtics!
 
+        System.out.println(map.containsValue("Boston"));
+        System.out.println(map.containsKey(7));
+         */
 
-
+        // values() method returns the Collection view of the values contained in this map
+        System.out.println("Collection view is: " + map.values());
 
     }
 
