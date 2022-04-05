@@ -15,7 +15,7 @@ public class UseQueue {
 
     public static void main(String[] args) {
 
-        /** ADD, PEEK, REMOVE AND POLL METHODS
+        /** ADD, PEEK, REMOVE AND POLL METHODS */
         Queue<String> restaurantLine = new LinkedList<>();
 
         // ADD - adding people to our restaurant line
@@ -37,23 +37,23 @@ public class UseQueue {
         // POLL - grab the next person in line and remove them
         restaurantLine.poll();
         System.out.println("Final Queue after Poll: " + restaurantLine);
-        */
 
-        // FOR-EACH and WHILE-LOOP
-        Queue<String> q = new LinkedList<>();
 
-        q.add("A");
-        q.add("B");
-        q.add("C");
+        /** FOR-EACH and WHILE-LOOP */
+        Queue<String> letters = new LinkedList<>();
 
-        Iterator iterator = q.iterator();
+        letters.add("A");
+        letters.add("B");
+        letters.add("C");
+
+        Iterator iterator = letters.iterator();
 
         while (iterator.hasNext()) {
-            System.out.println(iterator.next());
+            System.out.print(iterator.next() + " ");
         }
 
-
-
+        for(String s : letters) {
+            System.out.print(s + " ");
+        }
     }
-
 }
