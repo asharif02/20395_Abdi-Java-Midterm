@@ -27,7 +27,6 @@ public class DataReader {
     public static void main(String[] args) throws FileNotFoundException {
         String textFilePath = System.getProperty("user.dir") + "/src/data_structures/data/self-driving-car";
 
-
         String line;
         String fileContents = "";
         LinkedList<String> wordList = new LinkedList<>();
@@ -46,7 +45,8 @@ public class DataReader {
             e.printStackTrace();
         }
 
-        System.out.println(fileContents);
+        wordList.add((fileContents));
+        System.out.println(wordList);
 
 
         /** TESTING USING SCANNER
