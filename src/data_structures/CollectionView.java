@@ -1,14 +1,18 @@
 package data_structures;
 
+import jdk.swing.interop.SwingInterOpUtils;
+
 import java.util.HashMap;
 
 public class CollectionView {
 
+    /** INSTRUCTIONS
+     * A map is given to you below, with some data inserted into it.
+     *
+     * Retrieve the Collection view of the values present in map
+     */
+
     public static void main(String[] args) {
-        /*
-         Map is created and some data_structures.data is inserted into it.
-         Retrieve the Collection view of the values present in map
-         */
 
         HashMap<Integer, String> map = new HashMap<Integer, String>();
         map.put(1, "NYC");
@@ -17,6 +21,15 @@ public class CollectionView {
         map.put(4, "Boston");
         map.put(5, "San Jose");
         map.put(6, "Seattle");
+
+        // print every key-value pair
+        System.out.println(map);
+
+        // get specific value from the map
+        System.out.println(map.get(4)); // go celtics!
+
+
+
 
     }
 
