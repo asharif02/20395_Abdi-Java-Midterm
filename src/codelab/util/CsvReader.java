@@ -15,9 +15,9 @@ public class CsvReader {
     /**
      * You will find a Comma-Separated Value (CSV) file within this package. It contains CodeLab status' for each student
      * who registered for the CodeLab course.
-     * <p>
+     *
      * Based on the number of solutions you solved in CodeLab, a message will be generated for you.
-     * You need to find the average score of the class. [13]
+     * You need to find the average score of the class.
      **/
 
     public static void main(String[] args) {
@@ -29,42 +29,30 @@ public class CsvReader {
         List<Student> roster = new ArrayList<>();
         ArrayList<Integer> arrayList = new ArrayList<>();
 
-        /** SOLUTION
         try {
-            //parsing a CSV file into BufferedReader class constructor
+            // reader object that parses through CSV file
             br = new BufferedReader(new FileReader(csvFilePath));
-
             int lineNumber = 0;
-
             while ((row = br.readLine()) != null) {
-            //returns a Boolean value
+            // returns a Boolean value
                 if(lineNumber == 0) {
                     lineNumber++;
                     continue;
                 }
-
                 String[] rowArray = row.split(csvSplitBy);
-                //use comma as separator
-//                System.out.println(rowArray[5].replace("\"", ""));
-//                System.out.println(rowArray[13]);
-                arrayList.add(Integer.parseInt(rowArray[13]));
-
+                // use comma as separator
+                arrayList.add(Integer.parseInt(rowArray[13])); // index 13 holds class scores
             }
         } catch(IOException e) {
             e.printStackTrace();
         }
 
         int sum = 0;
-
         for(Integer i : arrayList) {
             sum += i;
         }
 
-        System.out.println("The average score of the class is: " + (sum / arrayList.size()));
-        */
-
-
-
+        System.out.println("Average class score: " + (sum / arrayList.size()));
 
         /** TESTING
         try {
@@ -80,15 +68,14 @@ public class CsvReader {
                 String[] values = line.split(csvSplitBy);
                 total.add(values[13]);
                 System.out.println(total);
-//                System.out.println(values[13]); // gets all the scores
+                System.out.println(values[13]); // gets all the scores
             }
         } catch (IOException e) {
             e.printStackTrace();
         }
          */
 
-
-        /** SAMI's CODE
+        /** SAMI's EXAMPLE CODE
         try {
             br = new BufferedReader(new FileReader(csvFilePath));
             int lineNumber = 0;
@@ -112,7 +99,6 @@ public class CsvReader {
         }
          */
 
-
     }
 
     private static String convertNumberOfProblemsSolved(Student student) {
@@ -132,7 +118,4 @@ public class CsvReader {
             return "Very low effort. Not a good sign, " + name;
         }
     }
-
-
-
 }
