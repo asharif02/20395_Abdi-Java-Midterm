@@ -49,8 +49,24 @@ Answer: A Stack is a linear data structure that follows the principle of Last In
 Answer: FILO stands for "First In, Last Out" and LIFO stands for "Last In, First Out" and they are acronyms commonly
         used to describe the order in which objects are accessed.
 
-11. Explain Big O Notation? (do later)
-Answer:
+11. Explain Big O Notation?
+Answer: Big O notation is the language we use for talking about how long an algorithm takes to run (time
+        complexity) or how much memory is used by an algorithm (space complexity). Big O notation can express
+        the best, worst and average-case running time of an algorithm.
+
+            O(1) - Constant Time. O(1) means it takes a constant time to run an algorithm, regardless of
+                   the side of the input.
+
+            O(n) - Linear Time. O(n) means that the run time increases at the same pace as the input.
+
+            O(n^2) - Quadratic Time. O(n^2) means that the calculation runs in quadratic time, which is the
+                     squared size of the input data.
+
+            O(log n) - Logarithmic Time. O(log n) means that the running time grows in proportion to the
+                       logarithm of the input size, meaning that the run time barely increases as you
+                       exponentially increase the input.
+
+        In Summary: Big O notation just describes the complexity of your code using algebraic terms.
 
 12. What is the best case to search an element from an array?
 Answer: O(n)
@@ -80,7 +96,6 @@ Answer: ArrayIndexOutOfBoundsException is one of the most common errors in Java 
 
 19. What are the different ways of copying an array into another array?
 Answer: There are 4 main ways of copying an array into another array:
-
             1. Manually
             2. Arrays.copyOf()
             3. System.arraycopy()
@@ -94,8 +109,29 @@ Answer: DFS stands for Depth First Search, and it uses Stack data structure. BFS
 Answer: Recursion is the technique of making a function call itself.
 
 22. What are linear and non-linear data Structures?
-Answer:
+Answer: Linear data structures are where data elements are arranged sequentially or linearly where each and
+        every element is attached to its previous and next adjacent. Some examples include:
+            - Array
+            - Stack
+            - Queue
+            - Linked List
+            - Hash Tables
 
+        Non-linear data structures are where data elements are NOT arranged sequentially or linearly. Some examples
+        include:
+            - Trees
+            - Graph
 
 23. Outline different sorting algorithms and their time complexities:
 
+Algorithm	     Time Complexity
+ 	             Best	         Average	    Worst
+Selection Sort	 Ω(n^2)	         θ(n^2)     	O(n^2)
+Bubble Sort	     Ω(n)	         θ(n^2)     	O(n^2)
+Insertion Sort	 Ω(n)	         θ(n^2)      	O(n^2)
+Heap Sort	     Ω(n log(n))	 θ(n log(n))	O(n log(n))
+Quick Sort	     Ω(n log(n))	 θ(n log(n))	O(n^2)
+Merge Sort	     Ω(n log(n))	 θ(n log(n))	O(n log(n))
+Bucket Sort	     Ω(n+k)	         θ(n+k)	        O(n^2)
+Radix Sort	     Ω(nk)	         θ(nk)       	O(nk)
+Count Sort	     Ω(n+k)	         θ(n+k)     	O(n+k)
