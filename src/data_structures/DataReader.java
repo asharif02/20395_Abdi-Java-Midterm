@@ -28,18 +28,28 @@ public class DataReader {
         String textFilePath = System.getProperty("user.dir") + "/src/data_structures/data/self-driving-car";
 
         String line;
+
+        /** Part 1 - read file and print to console */
+
+        try {
+            BufferedReader reader = new BufferedReader(new FileReader(textFilePath));
+            while((line = reader.readLine()) != null)
+                System.out.println(line);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        /** Part 2 - DATABASE CONNECTIVITY TBD */
+
+        /** Part 3 - store each word into LinkedList */
+
         String fileContents = "";
         LinkedList<String> wordList = new LinkedList<>();
-
-        // try/catch block used for exception handling
         try {
-            // reader object
             BufferedReader reader = new BufferedReader(new FileReader(textFilePath));
-            // for each iteration through the loop, read each line of text and put it in 'line' variable
-            // once 'line' is null/empty, we've reached the end of the file, and it'll exit the while loop
             while((line = reader.readLine()) != null)
                 fileContents += line;
-                //System.out.println(line);
             reader.close();
         } catch (IOException e) {
             e.printStackTrace();
@@ -48,20 +58,20 @@ public class DataReader {
         wordList.add((fileContents));
         System.out.println(wordList);
 
-
-        /** TESTING USING SCANNER
-
-        File file = new File(textFilePath);
-        Scanner scan = new Scanner(file);
-        LinkedList<String> wordList = new LinkedList<>();
-        String fileContent = "";
-        while(scan.hasNextLine()) {
-            fileContent = fileContent.concat(scan.nextLine() + "\n");
-        }
-
-        wordList.add(fileContent);
-        System.out.print(wordList);
+        /** Part 3 cont... using Scanner
          */
+
+//        File file = new File(textFilePath);
+//        Scanner scan = new Scanner(file);
+//        LinkedList<String> wordList = new LinkedList<>();
+//        String fileContent = "";
+//        while(scan.hasNextLine()) {
+//            fileContent = fileContent.concat(scan.nextLine() + "\n");
+//        }
+//
+//        wordList.add(fileContent);
+//        System.out.print(wordList);
+//        System.out.println(wordList.getLast());
 
     }
 }
