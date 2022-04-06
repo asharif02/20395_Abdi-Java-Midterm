@@ -12,5 +12,27 @@ public class Pattern {
 
     public static void main(String[] args) {
 
+        System.out.println(pattern(100));
+
+    }
+
+    public static int pattern(int num) {
+        int count = 1;
+        int secondCount = 1;
+
+        while(num >= 0) {
+
+            System.out.print(num + " ");
+
+            num -= secondCount;
+            count++;
+
+            if(count == 11) {
+                count = 1;
+                secondCount++;
+            }
+        }
+
+        return num;
     }
 }
