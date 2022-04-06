@@ -1,5 +1,9 @@
 package data_structures;
 
+import databases.SharedStepsDatabase;
+
+import java.sql.SQLException;
+import java.util.Collections;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -19,13 +23,14 @@ public class UseQueue {
         Queue<String> restaurantLine = new LinkedList<>();
 
         // ADD - adding people to our restaurant line
-        restaurantLine.add("John");
-        restaurantLine.add("Hannah");
+        restaurantLine.add("Selena");
+        restaurantLine.add("Kylie");
         restaurantLine.add("Abdi");
-        restaurantLine.add("Aaron");
-        restaurantLine.add("Jay");
+        restaurantLine.add("Isabella");
+        restaurantLine.add("Mia");
         System.out.println("Initial Queue: " + restaurantLine);
 
+        /**
         // PEEK- take a peek but don't remove person from line
         restaurantLine.peek();
         System.out.println("Peeking at: " + restaurantLine.peek());
@@ -37,23 +42,35 @@ public class UseQueue {
         // POLL - grab the next person in line and remove them
         restaurantLine.poll();
         System.out.println("Final Queue after Poll: " + restaurantLine);
+         */
 
+        /** FOR-EACH and WHILE-LOOP
+//        Queue<String> letters = new LinkedList<>();
+//
+//        letters.add("A");
+//        letters.add("B");
+//        letters.add("C");
+//
+//        Iterator iterator = letters.iterator();
+//
+//        while (iterator.hasNext()) {
+//            System.out.print(iterator.next() + " ");
+//        }
+//
+//        for(String s : letters) {
+//            System.out.print(s + " ");
+//        }
+         */
 
-        /** FOR-EACH and WHILE-LOOP */
-        Queue<String> letters = new LinkedList<>();
+        // DATABASE connectivity
 
-        letters.add("A");
-        letters.add("B");
-        letters.add("C");
+        String tableName = "Restaurant_Line";
+        String columnName = "Guests";
+        SharedStepsDatabase sql = new SharedStepsDatabase();
 
-        Iterator iterator = letters.iterator();
+//        sql.insertList("Restaurant", "Guests", Collections.singletonList(restaurantLine));
 
-        while (iterator.hasNext()) {
-            System.out.print(iterator.next() + " ");
-        }
+//        System.out.println(sql);
 
-        for(String s : letters) {
-            System.out.print(s + " ");
-        }
     }
 }

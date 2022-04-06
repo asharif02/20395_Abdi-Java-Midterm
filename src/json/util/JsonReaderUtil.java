@@ -7,6 +7,7 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
@@ -70,8 +71,6 @@ public class JsonReaderUtil {
                     JsonObject jsonobject = jsonArray.get(i).getAsJsonObject();
                     // Your code implementation starts here
                     empEmail = jsonobject.get("empEmail").toString();
-
-                    System.out.println(empEmail);
 
                 } catch (NullPointerException np) {
                     System.out.println("NO EMAIL EXISTS FOR STUDENT AT INDEX " + i);
