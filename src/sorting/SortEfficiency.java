@@ -32,7 +32,9 @@ public class SortEfficiency {
         Sorting algo = new Sorting();
         SharedStepsDatabase ssdb = new SharedStepsDatabase();
 
-        // region Selection Sort
+        /*
+
+        // region Selection Sort - 100 numbers took 0 milliseconds
         numberArray = algo.selectionSort(numberArray);
         long selectionSortExecutionTime = algo.executionTime;
 
@@ -52,26 +54,62 @@ public class SortEfficiency {
         // You must randomize the number array after each sorting algorithm to prepare it for the next sorting algorithm
         randomize(numberArray);
 
-        // region Insertion Sort
+        // region Insertion Sort - 100 numbers, 0 ms
         numberArray = algo.insertionSort(numberArray);
         long insertionSortExecutionTime = algo.executionTime;
 
         System.out.println("Total Execution Time of " + numberArray.length + " numbers in Insertion Sort took: "
                 + insertionSortExecutionTime + " milliseconds");
 
+        ssdb.insertIntegerArray("insertion_sort", "sorted_numbers", numberArray);
+
+        String query2 = "SELECT * FROM INSERTION_SORT";
+        List<String> sorted_numbers2 = ssdb.executeQueryReadAllSingleColumn(query2, "sorted_numbers");
+        printValue(sorted_numbers2);
+
         // endregion
 
         randomize(numberArray);
 
-        // region Bubble Sort
+        // region Bubble Sort - 100 in 0 ms
+
+        numberArray = algo.bubbleSort(numberArray);
+        long insertionSortExecutionTime = algo.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Bubble Sort took: "
+                + insertionSortExecutionTime + " milliseconds");
+
+        ssdb.insertIntegerArray("bubble_sort", "sorted_numbers", numberArray);
+
+        String query3 = "SELECT * FROM BUBBLE_SORT";
+        List<String> sorted_numbers3 = ssdb.executeQueryReadAllSingleColumn(query3, "sorted_numbers");
+        printValue(sorted_numbers3);
 
         // endregion
 
         randomize(numberArray);
+
+
+
 
         // region Merge Sort
 
+        numberArray = algo.mergeSort(numberArray);
+        long insertionSortExecutionTime = algo.executionTime;
+
+        System.out.println("Total Execution Time of " + numberArray.length + " numbers in Merge Sort took: "
+                + insertionSortExecutionTime + " milliseconds");
+
+        ssdb.insertIntegerArray("merge_sort", "sorted_numbers", numberArray);
+
+        String query4 = "SELECT * FROM MERGE_SORT";
+        List<String> sorted_numbers4 = ssdb.executeQueryReadAllSingleColumn(query4, "sorted_numbers");
+        printValue(sorted_numbers4);
+
         // endregion
+
+
+         */
 
         randomize(numberArray);
 
