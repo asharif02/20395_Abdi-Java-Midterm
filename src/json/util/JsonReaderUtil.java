@@ -7,13 +7,13 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Locale;
 
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import json.Employee;
+import xml.Student;
 
 public class JsonReaderUtil {
 
@@ -70,10 +70,15 @@ public class JsonReaderUtil {
                 try {
                     JsonObject jsonobject = jsonArray.get(i).getAsJsonObject();
                     // Your code implementation starts here
+                    empName = jsonobject.get("empName").toString();
                     empEmail = jsonobject.get("empEmail").toString();
+//                    empDept = jsonobject.get("empDept").toString();
+//                    empSalary = jsonobject.get("empSalary").toString();
+
+                    System.out.println("NAME: " + empName + "\n" + "EMAIL: " + empEmail + "\n");
 
                 } catch (NullPointerException np) {
-                    System.out.println("NO EMAIL EXISTS FOR STUDENT AT INDEX " + i);
+                    System.out.println("NO EMAIL EXISTS FOR STUDENT AT INDEX " + i + "\n");
                 }
             }
         }
