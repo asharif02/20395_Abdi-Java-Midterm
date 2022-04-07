@@ -41,7 +41,19 @@ public class Sorting {
 
     public int[] insertionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
+
         // IMPLEMENT HERE
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min])
+                    min = j;
+            }
+
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
 
         final long endTime = System.currentTimeMillis();
         this.executionTime = endTime - startTime;
@@ -50,37 +62,115 @@ public class Sorting {
     }
 
     public int[] bubbleSort(int[] array) {
+        final long startTime = System.currentTimeMillis();
+
         // IMPLEMENT HERE
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min])
+                    min = j;
+            }
+
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
 
         return array;
     }
 
     public int[] mergeSort(int[] array) {
+        final long startTime = System.currentTimeMillis();
+
         // IMPLEMENT HERE
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min])
+                    min = j;
+            }
+
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
 
         return array;
     }
 
     public int[] quickSort(int[] array) {
+        final long startTime = System.currentTimeMillis();
+
         // IMPLEMENT HERE
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min])
+                    min = j;
+            }
+
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
 
         return array;
     }
 
     public int[] heapSort(int[] array) {
+        final long startTime = System.currentTimeMillis();
+
         // IMPLEMENT HERE
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min])
+                    min = j;
+            }
+
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
 
         return array;
     }
 
     public int[] bucketSort(int[] array) {
-        //implement here
+        final long startTime = System.currentTimeMillis();
+
+        // IMPLEMENT HERE
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min])
+                    min = j;
+            }
+
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
 
         return array;
     }
 
     public int[] shellSort(int[] array) {
-        //implement here
+        final long startTime = System.currentTimeMillis();
+
+        // IMPLEMENT HERE
+        for (int i = 0; i < array.length - 1; i++) {
+            int min = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j] < array[min])
+                    min = j;
+            }
+
+            int temp = array[min];
+            array[min] = array[i];
+            array[i] = temp;
+        }
 
         return array;
     }

@@ -26,11 +26,13 @@ public class SortEfficiency {
 
     public static void main(String[] args) throws Exception {
         // Declare and initialize an array of a desired length with random numbers
-        int[] numberArray = new int[100];
+        int[] numberArray = new int[10_000];
         insertRandomNumbersIntoArray(numberArray);
 
         Sorting algo = new Sorting();
         SharedStepsDatabase ssdb = new SharedStepsDatabase();
+
+
 
         // region 1 - Selection Sort
         numberArray = algo.selectionSort(numberArray);
@@ -52,6 +54,8 @@ public class SortEfficiency {
         // You must randomize the number array after each sorting algorithm to prepare it for the next sorting algorithm
         randomize(numberArray);
 
+
+
         // region 2 - Insertion Sort
         numberArray = algo.insertionSort(numberArray);
         long insertionSortExecutionTime = algo.executionTime;
@@ -68,6 +72,8 @@ public class SortEfficiency {
         // endregion
 
         randomize(numberArray);
+
+
 
         // region 3 - Bubble Sort
         numberArray = algo.bubbleSort(numberArray);
@@ -86,6 +92,8 @@ public class SortEfficiency {
 
         randomize(numberArray);
 
+
+
         // region 4 - Merge Sort
         numberArray = algo.mergeSort(numberArray);
         long mergeSortExecutionTime = algo.executionTime;
@@ -102,6 +110,8 @@ public class SortEfficiency {
         // endregion
 
         randomize(numberArray);
+
+
 
         // region 5 - Quick Sort
         numberArray = algo.quickSort(numberArray);
@@ -120,6 +130,8 @@ public class SortEfficiency {
 
         randomize(numberArray);
 
+
+
         // region 6 - Heap Sort
         numberArray = algo.heapSort(numberArray);
         long heapSortExecutionTime = algo.executionTime;
@@ -136,6 +148,8 @@ public class SortEfficiency {
         // endregion
 
         randomize(numberArray);
+
+
 
         // region 7 - Bucket Sort
         numberArray = algo.bucketSort(numberArray);
@@ -154,6 +168,8 @@ public class SortEfficiency {
 
         randomize(numberArray);
 
+
+
         // region 8 - Shell Sort
         numberArray = algo.shellSort(numberArray);
         long shellSortExecutionTime = algo.executionTime;
@@ -168,6 +184,8 @@ public class SortEfficiency {
         printValue(sorted_numbers8);
 
         // endregion
+
+        randomize(numberArray);
 
     }
 
