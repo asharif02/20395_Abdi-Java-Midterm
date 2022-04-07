@@ -12,6 +12,7 @@ import java.util.*;
  *
  * @author Sami Sheikh
  */
+
 public class SharedStepsDatabase {
 
     public static Connection connect = null;

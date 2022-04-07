@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CnnAPI {
+
     /** INSTRUCTIONS
      * Go to this URL: https://newsapi.org/s/cnn-api
      *
