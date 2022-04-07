@@ -75,6 +75,8 @@ public class JsonReaderUtil {
 //                    empDept = jsonobject.get("empDept").toString();
 //                    empSalary = jsonobject.get("empSalary").toString();
 
+//                    System.out.println(empDept);
+//                    System.out.println(empSalary);
                     System.out.println("NAME: " + empName + "\n" + "EMAIL: " + empEmail + "\n");
 
                 } catch (NullPointerException np) {
