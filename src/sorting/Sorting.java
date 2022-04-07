@@ -18,6 +18,7 @@ public class Sorting {
         }
     }
 
+    // SELECTION SORT
     public int[] selectionSort(int[] array) {
         final long startTime = System.currentTimeMillis();
 
