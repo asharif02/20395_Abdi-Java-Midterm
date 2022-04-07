@@ -66,6 +66,7 @@ public class SharedStepsDatabase {
      * @param query The SQL query to be executed
      * @return The resultSet
      */
+
     public ResultSet executeQuery(String query) {
         try {
             statement = connect.createStatement();
@@ -86,6 +87,7 @@ public class SharedStepsDatabase {
      *
      * @return Entire result set as a List<List<String>>
      */
+
     public List<List<String>> executeQueryReadAll(String query) throws SQLException {
         resultSet = executeQuery(query);
         ResultSetMetaData metaData = resultSet.getMetaData();
@@ -112,6 +114,7 @@ public class SharedStepsDatabase {
      * @param columnName Identifies the column to read data_structures.data from
      * @return All cell values within the specified column, resulting from the query's execution
      */
+
     public List<String> executeQueryReadAllSingleColumn(String query, String columnName) throws SQLException {
         resultSet = executeQuery(query);
         List<String> dataList = new ArrayList<>();
@@ -136,6 +139,7 @@ public class SharedStepsDatabase {
      * @param columnNumber Identifies the column to read data_structures.data from (e.g. - 1 = 1st column, 2 = 2nd column...)
      * @return All cell values within the specified column, resulting from the query's execution
      */
+
     public List<String> executeQueryReadAllSingleColumn(String query, int columnNumber) throws Exception {
         resultSet = executeQuery(query);
         List<String> dataList = new ArrayList<>();
@@ -155,6 +159,7 @@ public class SharedStepsDatabase {
      * @param columnName Name of the column
      * @param array The array to be inserted
      */
+
     public void insertIntegerArray(String tableName, String columnName, int[] array) {
         try {
             ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
@@ -181,6 +186,7 @@ public class SharedStepsDatabase {
      * @param columnName Name of the column
      * @param string The String to be inserted
      */
+
     public void insertString(String tableName, String columnName, String string) {
         try {
             ps = connect.prepareStatement("INSERT INTO " + tableName + " ( " + columnName + " ) VALUES(?)");
@@ -198,6 +204,7 @@ public class SharedStepsDatabase {
      * @param columnName Name of the column
      * @param list The list to be inserted
      */
+
     public static void insertList(String tableName, String columnName, List<Object> list) {
         try {
             ps = connect.prepareStatement("DROP TABLE IF EXISTS `" + tableName + "`;");
@@ -222,6 +229,7 @@ public class SharedStepsDatabase {
      * @param tableName Name of the table
      * @param map The map to be inserted
      */
+
     public void insertMap(String tableName, Map<Object, Object> map) {
         try {
             ps = connect.prepareStatement("DROP TABLE IF EXISTS " + tableName + ";");
