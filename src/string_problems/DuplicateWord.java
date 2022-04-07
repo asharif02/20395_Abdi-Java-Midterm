@@ -1,5 +1,6 @@
 package string_problems;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
@@ -20,6 +21,7 @@ public class DuplicateWord {
 
     }
 
+    /** TESTING
     public static void duplicateWord(String sentence) {
 
         // split
@@ -44,6 +46,29 @@ public class DuplicateWord {
         for(String word : wordsInString) {
             if(wordCount.get(word) > 1) {
                 System.out.println(word + ": " + wordCount.get(word));
+            }
+        }
+    }
+     */
+
+    // finding duplicate words
+    public static void duplicateWord(String sentence2) {
+
+        String[] finalArray = sentence2.split(" ");
+
+        for(int i = 0; i < finalArray.length; i++) {
+
+            int count = 1;
+
+            for(int j = i + 1; j < finalArray.length; j++) {
+                if(finalArray[i].equals(finalArray[j])){
+                    count++;
+                    finalArray[j] = "-1";
+                }
+            }
+
+            if(count > 1 && (!(finalArray[i].equals("-1")))) {
+                System.out.println(finalArray[i].toLowerCase() + ": " + count + " times");
             }
         }
     }
