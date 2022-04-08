@@ -40,9 +40,26 @@ public class DataReader {
             e.printStackTrace();
         }
 
-        /** Part 2 - DATABASE CONNECTIVITY TBD */
+        /** Part 2 - store and retrieve from database (does not matter how you do this) */
 
-        /** Part 3 - store each word into LinkedList */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        /** Part 3 - store each word into LinkedList
 
         String fileContents = "";
         LinkedList<String> wordList = new LinkedList<>();
@@ -55,11 +72,13 @@ public class DataReader {
             e.printStackTrace();
         }
 
+
         wordList.add((fileContents));
         System.out.println(wordList);
+         */
 
         /** Part 3 cont... using Scanner
-         */
+
 
 //        File file = new File(textFilePath);
 //        Scanner scan = new Scanner(file);
@@ -72,6 +91,7 @@ public class DataReader {
 //        wordList.add(fileContent);
 //        System.out.print(wordList);
 //        System.out.println(wordList.getLast());
+         */
 
     }
 }
