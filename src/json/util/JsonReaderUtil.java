@@ -72,13 +72,7 @@ public class JsonReaderUtil {
                     // Your code implementation starts here
                     empName = jsonobject.get("empName").toString();
                     empEmail = jsonobject.get("empEmail").toString();
-//                    empDept = jsonobject.get("empDept").toString();
-//                    empSalary = jsonobject.get("empSalary").toString();
-
-//                    System.out.println(empDept);
-//                    System.out.println(empSalary);
-//                    System.out.println(empName);
-//                    System.out.println(empEmail);
+//
                     System.out.println("NAME: " + empName + "\n" + "EMAIL: " + empEmail + "\n");
 
                 } catch (NullPointerException np) {
@@ -91,5 +85,4 @@ public class JsonReaderUtil {
             System.out.println(entry.getEmpName() + entry.getEmpEmail() + entry.getDepartment() + entry.getSalary());
         }
     }
-
 }
