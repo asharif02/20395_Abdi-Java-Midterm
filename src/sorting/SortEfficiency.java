@@ -26,7 +26,7 @@ public class SortEfficiency {
 
     public static void main(String[] args) throws Exception {
         // Declare and initialize an array of a desired length with random numbers
-        int[] numberArray = new int[10_000];
+        int[] numberArray = new int[10];
         insertRandomNumbersIntoArray(numberArray);
 
         Sorting algo = new Sorting();
