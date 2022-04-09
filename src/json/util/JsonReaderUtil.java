@@ -88,7 +88,7 @@ public class JsonReaderUtil {
 //                    System.out.println(empName + empEmail + empDept + empSalary);
 
                 } catch (NullPointerException np) {
-                    System.out.println("NO EMAIL EXISTS FOR STUDENT AT INDEX " + i);
+                    System.out.println("NO EMPLOYEE EXISTS AT INDEX " + i);
                 }
             }
             System.out.println();
@@ -96,6 +96,8 @@ public class JsonReaderUtil {
 
         for (Employee entry : empList) {
 //            System.out.println(entry.getEmpName() + entry.getEmpEmail() + entry.getDepartment() + entry.getSalary());
+
+            // used print formatting to format the output correctly
             System.out.printf("NAME: %s\nEMAIL: %s\nDEPT: %s\nSALARY: %s\n\n", entry.getEmpName(), entry.getEmpEmail(), entry.getDepartment(), entry.getSalary());
         }
     }

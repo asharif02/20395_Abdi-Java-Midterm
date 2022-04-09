@@ -17,18 +17,19 @@ import java.util.List;
 public class CnnAPI {
 
     /** INSTRUCTIONS
-     * Go to this URL: https://newsapi.org/s/cnn-api
+     * Go to this URL: https://newsapi.org/s/cnn-api (DONE)
      *
      * Get your API Key from this website. Once you have your key, you can append your key to the end of the URL, as
-     * shown below.
+     * shown below. (DONE)
      *
      *  https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=YOUR_API_KEY
+     *  https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=872639d33d134c278f84e6d9e5cf9408
      *
      * When you navigate to that full URL, you will be submitting a request, and the response should be CNN's
-     * top headline news.
+     * top headline news. (DONE)
      *
      * After retrieving the JSON response, you can go to the following link to validate that it is, in fact, valid JSON:
-     *  https://jsonlint.com/
+     *  https://jsonlint.com/ (DONE)
      *
      *      "articles": [{
      * 		"source": {
@@ -59,8 +60,8 @@ public class CnnAPI {
      */
 
     public static void main(String[] args) throws IOException, JSONException {
-        String apiKey = "";
-        String URL = "";
+        String apiKey = "872639d33d134c278f84e6d9e5cf9408";
+        String URL = "https://newsapi.org/v2/top-headlines?sources=cnn&apiKey=872639d33d134c278f84e6d9e5cf9408";
 
         NewsData news = null;
         List<NewsData> newsDataList = new ArrayList<>();
@@ -98,15 +99,46 @@ public class CnnAPI {
             try {
                 JsonObject jsonobject = jsonArray.get(i).getAsJsonObject();
 
+                source = jsonobject.get("source").toString();
+//                System.out.println("SOURCE: " + source);
+                author = jsonobject.get("author").toString();
+//                System.out.println("AUTHOR: " + author);
                 title = jsonobject.get("title").toString();
-                System.out.println("TITLE: " + title);
+//                System.out.println("TITLE: " + title);
+                description = jsonobject.get("description").toString();
+//                System.out.println("DESCRIPTION: " + description);
+                url = jsonobject.get("url").toString();
+//                System.out.println("URL: " + url);
+                urlToImage = jsonobject.get("urlToImage").toString();
+//                System.out.println("URL TO IMAGE: " + urlToImage);
+                publishedAt = jsonobject.get("publishedAt").toString();
+//                System.out.println("PUBLISHED AT: " + publishedAt);
+                content = jsonobject.get("content").toString();
+//                System.out.println("CONTENT: " + content);
+
+                System.out.printf("SOURCE: %s\nAUTHOR: %s\nTITLE: %s\nDESCRIPTION: %s\nURL: %s\nURL TO IMAGE: %s\n" +
+                            "PUBLISHED AT: %s\nCONTENT: %s\n\n", source, author, title, description, url, urlToImage,
+                        publishedAt, content);
+
+                NewsData news2 = new NewsData(source, author, title, description, url, urlToImage, publishedAt, content);
+                newsDataList.add(news2);
+//                System.out.println(newsDataList + "\n");
 
                 // Implement the remaining code, using the provided example within this try block
 
             } catch (Exception ex) {
-
+//                System.out.println("NO NEWS EXISTS AT INDEX " + i);
             }
         }
+
+//        for (NewsData entry : newsDataList) {
+////            System.out.println(entry.getEmpName() + entry.getEmpEmail() + entry.getDepartment() + entry.getSalary());
+//
+//            // used print formatting to format the output correctly
+//            System.out.printf("SOURCE: %s\nAUTHOR: %s\nTITLE: %s\nDESCRIPTION: %s\nURL: %s\nURL TO IMAGE: %s\n" +
+//                            "PUBLISHED AT: %s\nCONTENT: %s\n",
+//                    entry.getClass());
+//        }
     }
 
     // Inner Class
@@ -120,4 +152,3 @@ public class CnnAPI {
     }
 
 }
-
