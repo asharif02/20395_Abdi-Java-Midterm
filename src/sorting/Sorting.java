@@ -157,22 +157,34 @@ public class Sorting {
         return array;
     }
 
+    // region 8 - SHELL SORT
     public int[] shellSort(int[] array) {
-        final long startTime = System.currentTimeMillis();
 
         // IMPLEMENT HERE
-        for (int i = 0; i < array.length - 1; i++) {
-            int min = i;
-            for (int j = i + 1; j < array.length; j++) {
-                if (array[j] < array[min])
-                    min = j;
+        final long startTime = System.currentTimeMillis();
+
+        int n = array.length;
+        for (int i = 0; i < n; ++i) {
+            n = array.length;
+
+            for (int gap = n/2; gap > 0; gap /= 2) {
+                for (i = gap; i < n; i += 1) {
+                    int temp = array[i];
+                    int j;
+                    for (j = i; j >= gap && array[j - gap] > temp; j -= gap)
+                        array[j] = array[j - gap];
+
+                    array[j] = temp;
+                }
             }
 
-            int temp = array[min];
-            array[min] = array[i];
-            array[i] = temp;
         }
+
+        final long endTime = System.currentTimeMillis();
+        this.executionTime = endTime - startTime;
 
         return array;
     }
+    // endregion
+
 }
