@@ -33,7 +33,6 @@ public class EmployeeInfo extends EmployeeData{
     private String vacationTime;
 
 
-
     // Make sure to declare and use static, non-static & final fields
     static final String companyName = "Netflix";
     static final String employmentEndDate = "Wake up, you're dreaming. You never even started.";
@@ -58,12 +57,12 @@ public class EmployeeInfo extends EmployeeData{
 
     }
 
-    /*
-    You need to implement the logic of this method as such:
-        It should calculate employee bonus based on salary and performance.
-        It should return the total yearly bonus
-        e.g. - Bonus = 10% of yearly salary for best performance
-               Bonus = 6% of yearly salary for average performance, etc.
+    /** INSTRUCTIONS
+     * You need to implement the logic of this method as such:
+     *      It should calculate employee bonus based on salary and performance.
+     *      It should return the total yearly bonus
+     *      e.g. - Bonus = 10% of yearly salary for best performance
+     *          Bonus = 6% of yearly salary for average performance, etc.
      */
     public static int calculateAnnualBonus(int salary, int performanceGrade) {
 
@@ -94,13 +93,14 @@ public class EmployeeInfo extends EmployeeData{
         return total;
     }
 
-    /*
-    You need to implement the logic of this method as such:
-        It should calculate employee pension based on salary and numbers of years spent with the company.
-        It should return the total pension amount.
-        e.g. - Employee will receive 5% of salary as pension for every year they are with the company
+    /** INSTRUCTIONS
+     * You need to implement the logic of this method as such:
+     *      It should calculate employee pension based on salary and numbers of years spent with the company.
+     *      It should return the total pension amount.
+     *      e.g. - Employee will receive 5% of salary as pension for every year they are with the company
      *
      */
+
     public static int calculateEmployeePension(int salary) {
         int total = 0;
         int yearsWithCompany = 0;

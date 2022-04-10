@@ -7,5 +7,4 @@ public abstract class EmployeeData implements Employee{
     public void printSlogan(){
         System.out.println("See What's Next.");
     }
-
 }

@@ -41,5 +41,4 @@ public class CompanyEmployee extends EmployeeInfo {
         super(name, employeeId, employeePosition, email, department, salary);
     }
 
-
 }
