@@ -2,6 +2,7 @@ package data_structures;
 
 import databases.SharedStepsDatabase;
 
+import java.sql.SQLException;
 import java.util.*;
 
 public class UseMap {
@@ -31,13 +32,18 @@ public class UseMap {
             System.out.println("VALUE: " + map.get(key));
         }
 
-
         String tableName = "`test_hash_map`";
         SharedStepsDatabase sql = new SharedStepsDatabase();
 
         // IMPLEMENT HERE
 
+        sql.insertMap(tableName, map);
 
+        String query = "SELECT * FROM test_hash_map";
+        String value = null;
+        value = String.valueOf(sql.executeQueryReadAllSingleColumn(query, "value"));
 
+        System.out.println(value);
     }
+
 }
