@@ -7,20 +7,18 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-
 public class UseArrayList {
+
+    /** INSTRUCTIONS
+     * Demonstrate how to use ArrayList that includes using the add, peek, remove & retrieve methods.
+     * Use For-Each loop and While-loop with Iterator to retrieve data_structures.data.
+     *
+     * Store and retrieve data_structures.data from/to a database table.
+     */
 
     public static void main(String[] args) throws Exception{
 
-        /*
-         * Demonstrate how to use ArrayList that includes using the add, peek, remove & retrieve methods.
-         * Use For-Each loop and While-loop with Iterator to retrieve data_structures.data.
-         *
-         * Store and retrieve data_structures.data from/to a database table.
-         */
-
         SharedStepsDatabase ssdb = new SharedStepsDatabase();
-
 
         List<Object> carList = new ArrayList();
 
@@ -33,7 +31,6 @@ public class UseArrayList {
 
         carList.remove("Jaguar");
         System.out.println("After removal: " + carList);
-
 
         String tableName = "Cars";
         String columnName = "car_make";
