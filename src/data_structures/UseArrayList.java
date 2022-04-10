@@ -24,14 +24,14 @@ public class UseArrayList {
 
         List<Object> carList = new ArrayList();
 
-        carList.add("Audi");
+        carList.add("Maserati");
         carList.add("BMW");
-        carList.add("Mercedes");
         carList.add("Tesla");
-        carList.add("Bugatti");
+        carList.add("Jaguar");
+        carList.add("Subaru");
         System.out.println("Initial ArrayList: " + carList);
 
-        carList.remove("BMW");
+        carList.remove("Jaguar");
         System.out.println("After removal: " + carList);
 
 

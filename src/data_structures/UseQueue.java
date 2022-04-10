@@ -7,30 +7,30 @@ import java.util.*;
 
 public class UseQueue {
 
+    /** INSTRUCTIONS
+     * Demonstrate how to use Queue that includes add, peek, remove & poll elements.
+     * Use For-Each loop and While-Loop with Iterator to retrieve data_structures.data.
+     *
+     * Store and retrieve data_structures.data from/to a database table.
+     */
+
     public static void main(String[] args) throws SQLException {
-        /*
-         * Demonstrate how to use Queue that includes add, peek, remove & poll elements.
-         * Use For-Each loop and While-Loop with Iterator to retrieve data_structures.data.
-         *
-         * Store and retrieve data_structures.data from/to a database table.
-         */
 
         Queue<String> restaurantLine = new LinkedList<>();
 
-        restaurantLine.add("Romario");
-        restaurantLine.add("Zidan");
-        restaurantLine.add("Ronaldo");
-        restaurantLine.add("Kaka");
-        restaurantLine.add("Cristiano");
-        restaurantLine.add("Haaland");
-        restaurantLine.add("Bruce");
+        restaurantLine.add("Alex");
+        restaurantLine.add("Mia");
+        restaurantLine.add("John");
+        restaurantLine.add("Abdi");
+        restaurantLine.add("Jay");
+        restaurantLine.add("Hannah");
 
         System.out.println("Initial Queue: " + restaurantLine);
 
         restaurantLine.peek();
         System.out.println("Peeking at: " + restaurantLine.peek());
 
-        restaurantLine.remove("Romario");
+        restaurantLine.remove("Abdi");
         System.out.println("After removal: " + restaurantLine);
 
         restaurantLine.poll();
@@ -38,9 +38,9 @@ public class UseQueue {
 
         Queue<String> letters = new LinkedList<>();
 
-        letters.add("V");
-        letters.add("I");
-        letters.add("P");
+        letters.add("A");
+        letters.add("B");
+        letters.add("C");
 
         Iterator iterator = letters.iterator();
 
@@ -65,5 +65,6 @@ public class UseQueue {
         columnName = String.valueOf(sql.executeQueryReadAll(query));
 
         System.out.println(columnName);
+
     }
 }
