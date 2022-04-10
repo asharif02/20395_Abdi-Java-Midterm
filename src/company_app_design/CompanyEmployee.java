@@ -2,7 +2,7 @@ package company_app_design;
 
 import java.util.ArrayList;
 
-public class CompanyEmployee {
+public class CompanyEmployee extends EmployeeInfo {
 
     /** INSTRUCTIONS
      *  This class has a main method where you will be able to create instances of the EmployeeInfo class in order
@@ -16,40 +16,29 @@ public class CompanyEmployee {
 
     public static void main(String[] args) {
 
-        EmployeeInfo e1 = new EmployeeInfo("John", 1, "Manager", "john@gmail.com", "Marketing", 90_000);
+        EmployeeInfo e1 = new EmployeeInfo("Abdi", 1, "Janitor", "abdi@netflix.com",
+                "Cleaning", 2_500_000);
 
-        System.out.println("Emp ID: " + e1.employeeId());
+        System.out.println("Name: " + e1.employeeName());
+        System.out.println("Company: " + companyName);
+        System.out.println("Dept: " + e1.getDepartment());
+        System.out.println("Emp Salary: " + e1.calculateSalary() + "\n");
 
-        System.out.println("Emp Dept:" + e1.getDepartment());
+        e1.assignDepartment("Sales");
 
-        System.out.println("Emp email: " + e1.getEmail());
+        System.out.println("New Dept: " + e1.getDepartment());
 
-        System.out.println("Emp Salary: " + e1.calculateSalary());
+        System.out.println("Employee Bonus: " + EmployeeInfo.calculateAnnualBonus(125_000, 5) + "\n");
 
-
-        e1.assignDepartment("Engineering");
-
-        System.out.println("new department: " + e1.getDepartment());
-
-        System.out.println("Num of employees: " + e1.getNumOfEmployees());
-        System.out.println();
-        e1.isFullTime(false);
-        System.out.println("Benefits for part time employees: ");
-        e1.benefits();
-        System.out.println();
-        e1.isFullTime(true);
-        System.out.println("Benefits for full-time employees: ");
-        e1.benefits();
-        System.out.println();
-
-        System.out.println("Employee Bonus: " + EmployeeInfo.calculateAnnualBonus(90_000, 4));
-        System.out.println();
         e1.printSlogan();
+    }
 
+    public CompanyEmployee(String name, int employeeId, String employeePosition) {
+        super(name, employeeId, employeePosition);
+    }
 
-
-
-
+    public CompanyEmployee(String name, int employeeId, String employeePosition, String email, String department, int salary) {
+        super(name, employeeId, employeePosition, email, department, salary);
     }
 
 

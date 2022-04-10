@@ -9,12 +9,12 @@ public class EmployeeInfo extends EmployeeData{
      * This class should implement the Employee interface, but you must do that without using the keyword `implement`
      * anywhere in this class. DONE
      *
-     * HINT: Take a look at the collections framework diagram. Do you see how a class may implement an interface without
+     * HINT: Take a look at the collections' framework diagram. Do you see how a class may implement an interface without
      *       directly implementing it? DONE
      *
      * YOU MUST USE/DO:
      *         OOP (Abstraction, Encapsulation, Inheritance and Polymorphism) concepts in every way possible
-     *         Use all kind of keywords (super, this, static, final, etc)
+     *         Use all kind of keywords (super, this, static, final, etc.)
      *         Implement nested class below (DateConversion)
      *         Use Exception Handling
      *
@@ -35,8 +35,8 @@ public class EmployeeInfo extends EmployeeData{
 
 
     // Make sure to declare and use static, non-static & final fields
-    static final String companyName = "Tesla";
-    static final String employmentEndDate = "Never. You have to work here until you die :)";
+    static final String companyName = "Netflix";
+    static final String employmentEndDate = "Wake up, you're dreaming. You never even started.";
 
     // You must have/use multiple constructors to initialize instance variables that you will create above
 
@@ -133,22 +133,6 @@ public class EmployeeInfo extends EmployeeData{
         return total;
     }
 
-    public void chooseVacationTime(){ //I know this method doesn't make much sense but I couldn't think of anything else
-
-        try{
-            Scanner scan = new Scanner(System.in);
-            System.out.println("What is the month/year that you need a vacation?");
-            String monthAndYear = scan.next();
-            vacationTime = DateConversion.convertDate(monthAndYear);
-
-
-        } catch(IllegalArgumentException iae){
-
-            System.out.println("Sorry, no integers allowed! Must be a String value.");
-
-        }
-
-    }
 
     @Override
     public int employeeId() {
@@ -174,9 +158,9 @@ public class EmployeeInfo extends EmployeeData{
     public void benefits() {
 
         if(isFullTime){
-            System.out.println("Benefits include Dental, Health, Vision, PTO");
+            System.out.println("FREE NETFLIX SUBSCRIPTION!");
         } else {
-            System.out.println("Benefits include nothing, you should probably go work somewhere else. We hate our part-time employees.");
+            System.out.println("What benefits?");
         }
 
     }
