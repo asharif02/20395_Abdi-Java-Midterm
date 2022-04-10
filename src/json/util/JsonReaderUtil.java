@@ -47,7 +47,7 @@ public class JsonReaderUtil {
         URLConnection request = url.openConnection();
         request.connect();
 
-//        Employee emp = null;
+        Employee emp = null;
         String empName;
         String empEmail;
         String empDept;
@@ -82,8 +82,8 @@ public class JsonReaderUtil {
 //                    emp.setSalary(empSalary);
 //                    empList.add((emp));
 
-                    Employee emp2 = new Employee(empName, empEmail, empDept, empSalary);
-                    empList.add(emp2);
+                    emp = new Employee(empName, empEmail, empDept, empSalary);
+                    empList.add(emp);
 
 //                    System.out.println(empName + empEmail + empDept + empSalary);
 
