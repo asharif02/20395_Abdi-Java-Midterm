@@ -101,4 +101,5 @@ public class JsonReaderUtil {
             System.out.printf("NAME: %s\nEMAIL: %s\nDEPT: %s\nSALARY: %s\n\n", entry.getEmpName(), entry.getEmpEmail(), entry.getDepartment(), entry.getSalary());
         }
     }
+
 }
